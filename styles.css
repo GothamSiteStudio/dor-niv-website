@@ -777,6 +777,26 @@ details[open] summary {
   color: var(--accent-2);
 }
 
+.footer-credit {
+  width: 100%;
+  text-align: center;
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-credit a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-credit a:hover {
+  color: var(--accent-2);
+}
+
 @media (max-width: 960px) {
   .hero-grid {
     grid-template-columns: 1fr;
