@@ -24,11 +24,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -37,7 +46,17 @@
     <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="דף הבית">
-          <img class="brand-logo" src="images/logo.jpg" alt="Break Your Limits – Dor Niv" />
+          <picture>
+            <source type="image/webp" srcset="images/logo-200.webp 200w" sizes="150px" />
+            <img
+              class="brand-logo"
+              src="images/logo-200.jpg"
+              width="200"
+              height="132"
+              alt="Break Your Limits – Dor Niv"
+              decoding="async"
+            />
+          </picture>
         </a>
 
         <button
@@ -98,7 +117,22 @@
 
           <div class="hero-media" aria-label="תמונה ראשית">
             <div class="media-card">
-              <img src="images/IMG_9680.PNG" alt="דור ניב" style="width: 100%; height: auto; display: block;" />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/IMG_9680-400.webp 400w, images/IMG_9680-800.webp 800w"
+                  sizes="(max-width: 960px) 100vw, 380px"
+                />
+                <img
+                  src="images/IMG_9680-800.jpg"
+                  width="800"
+                  height="794"
+                  alt="דור ניב"
+                  decoding="async"
+                  fetchpriority="high"
+                  style="width: 100%; height: auto; display: block;"
+                />
+              </picture>
               <div class="media-card-caption">
                 <p class="caption-title">דור ניב</p>
                 <p class="caption-subtitle">מאמן ריצה למרחקים ארוכים • Break Your Limits</p>
@@ -224,7 +258,22 @@
       <section class="section alt" id="about" aria-label="קצת על דור ניב">
         <div class="container about-grid">
           <div class="about-media">
-            <img src="images/IMG_9652.PNG" alt="דור ניב" style="width: 100%; height: auto; display: block; border-radius: var(--radius); box-shadow: var(--shadow);" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/IMG_9652-400.webp 400w, images/IMG_9652-800.webp 800w"
+                sizes="(max-width: 960px) 100vw, 480px"
+              />
+              <img
+                src="images/IMG_9652-800.jpg"
+                width="800"
+                height="828"
+                alt="דור ניב"
+                decoding="async"
+                loading="lazy"
+                style="width: 100%; height: auto; display: block; border-radius: var(--radius); box-shadow: var(--shadow);"
+              />
+            </picture>
           </div>
           <div class="about-content">
             <h2 class="section-title">אני דור ניב</h2>
@@ -304,16 +353,76 @@
 
           <div class="results-grid" role="list" aria-label="גלריית תוצאות (מקום לתמונות)">
             <figure class="result-card" role="listitem">
-              <img src="images/IMG_9653.PNG" alt="תוצאת מתאמן" style="width: 100%; height: auto; display: block;" />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/IMG_9653-400.webp 400w, images/IMG_9653-800.webp 800w"
+                  sizes="(max-width: 960px) 100vw, 350px"
+                />
+                <img
+                  src="images/IMG_9653-800.jpg"
+                  width="800"
+                  height="796"
+                  alt="תוצאת מתאמן"
+                  decoding="async"
+                  loading="lazy"
+                  style="width: 100%; height: auto; display: block;"
+                />
+              </picture>
             </figure>
             <figure class="result-card" role="listitem">
-              <img src="images/IMG_9654.PNG" alt="תוצאת מתאמן" style="width: 100%; height: auto; display: block;" />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/IMG_9654-400.webp 400w, images/IMG_9654-800.webp 800w"
+                  sizes="(max-width: 960px) 100vw, 350px"
+                />
+                <img
+                  src="images/IMG_9654-800.jpg"
+                  width="800"
+                  height="804"
+                  alt="תוצאת מתאמן"
+                  decoding="async"
+                  loading="lazy"
+                  style="width: 100%; height: auto; display: block;"
+                />
+              </picture>
             </figure>
             <figure class="result-card" role="listitem">
-              <img src="images/IMG_9655.PNG" alt="תוצאת מתאמן" style="width: 100%; height: auto; display: block;" />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/IMG_9655-400.webp 400w, images/IMG_9655-800.webp 800w"
+                  sizes="(max-width: 960px) 100vw, 350px"
+                />
+                <img
+                  src="images/IMG_9655-800.jpg"
+                  width="800"
+                  height="854"
+                  alt="תוצאת מתאמן"
+                  decoding="async"
+                  loading="lazy"
+                  style="width: 100%; height: auto; display: block;"
+                />
+              </picture>
             </figure>
             <figure class="result-card" role="listitem">
-              <img src="images/IMG_9650.PNG" alt="תוצאת מתאמן" style="width: 100%; height: auto; display: block;" />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/IMG_9650-400.webp 400w, images/IMG_9650-800.webp 800w"
+                  sizes="(max-width: 960px) 100vw, 350px"
+                />
+                <img
+                  src="images/IMG_9650-800.jpg"
+                  width="800"
+                  height="828"
+                  alt="תוצאת מתאמן"
+                  decoding="async"
+                  loading="lazy"
+                  style="width: 100%; height: auto; display: block;"
+                />
+              </picture>
             </figure>
           </div>
         </div>
@@ -329,9 +438,10 @@
           <div class="video-grid">
             <div class="video">
               <iframe
-                src="https://www.youtube.com/embed/7aT7rfvDHxo"
+                src="https://www.youtube-nocookie.com/embed/7aT7rfvDHxo"
                 title="וידאו מיוטיוב: מה מחריב לרצים את האימון עוד לפני שהאימון התחיל?"
                 loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
@@ -441,7 +551,18 @@
     <footer class="site-footer" aria-label="פוטר">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <img class="footer-logo" src="images/logo.jpg" alt="Break Your Limits – Dor Niv" />
+          <picture>
+            <source type="image/webp" srcset="images/logo-200.webp 200w" sizes="150px" />
+            <img
+              class="footer-logo"
+              src="images/logo-200.jpg"
+              width="200"
+              height="132"
+              alt="Break Your Limits – Dor Niv"
+              decoding="async"
+              loading="lazy"
+            />
+          </picture>
           <p>© <span id="year"></span> דור ניב. כל הזכויות שמורות.</p>
         </div>
         <div class="footer-links" aria-label="קישורים">
