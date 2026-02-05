@@ -1,0 +1,10 @@
+# robots.txt for dornivrunningcoach.co.il
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dornivrunningcoach.co.il/sitemap.xml
+
+# Block access to admin/private areas (if any exist in future)
+Disallow: /admin/
+Disallow: /private/
