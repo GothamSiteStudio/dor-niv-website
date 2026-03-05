@@ -25,7 +25,7 @@
       property="og:description"
       content="אימון ריצה מדויק + ליווי אישי: משפרים תוצאות, מפחיתים פציעות, ומגיעים לקו הזינוק מוכנים. לשיחת ייעוץ ללא עלות – השאירו פרטים."
     />
-    <meta property="og:image" content="images/logo.jpg" />
+    <meta property="og:image" content="https://dornivrunningcoach.co.il/images/logo.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -126,16 +126,25 @@
     }
     </script>
 
-    <!-- Matomo Tag Manager -->
+    <!-- Matomo -->
     <script>
-      var _mtm = window._mtm = window._mtm || [];
-      _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.dornivrunningcoach.co.il"]);
+      _paq.push(["setDomains", ["*.dornivrunningcoach.co.il"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
       (function() {
+        var u="https://matomo.alphalockandsafe.com/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '5']);
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true; g.src='https://cdn.matomo.cloud/alphalockandsafe.matomo.cloud/container_FnarB2nE.js'; s.parentNode.insertBefore(g,s);
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
-    <!-- End Matomo Tag Manager -->
+    <noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.alphalockandsafe.com/matomo/matomo.php?idsite=5&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Matomo Code -->
   </head>
   <body>
     <a class="skip-link" href="#main">דלגו לתוכן</a>
